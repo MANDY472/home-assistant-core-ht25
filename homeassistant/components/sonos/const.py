@@ -35,10 +35,8 @@ SONOS_SHARE = "share"
 SONOS_OTHER_ITEM = "other items"
 SONOS_AUDIO_BOOK = "audio book"
 
-# Added constants to replace duplicated string literals
+# Added constants to replace duplicated string literals for A:ALBUMARTIST/
 SONOS_ALBUM_ARTIST_PREFIX = "A:ALBUMARTIST/"
-SONOS_ITEM_MUSIC_TRACK = "object.item.audioItem.musicTrack"
-SONOS_ITEM_AUDIO_BOOK = "object.item.audioItem.audioBook"
 
 MEDIA_TYPE_DIRECTORY = MediaClass.DIRECTORY
 
@@ -78,9 +76,9 @@ SONOS_TO_MEDIA_CLASSES = {
     "object.container.playlistContainer.sameArtist": MediaClass.ARTIST,
     "object.container.playlistContainer": MediaClass.PLAYLIST,
     "object.item": MediaClass.TRACK,
-    SONOS_ITEM_MUSIC_TRACK: MediaClass.TRACK,
+    "object.item.audioItem.musicTrack": MediaClass.TRACK,
     "object.item.audioItem.audioBroadcast": MediaClass.GENRE,
-    SONOS_ITEM_AUDIO_BOOK: MediaClass.TRACK,
+    "object.item.audioItem.audioBook": MediaClass.TRACK,
 }
 
 SONOS_TO_MEDIA_TYPES = {
@@ -98,8 +96,8 @@ SONOS_TO_MEDIA_TYPES = {
     "object.container.person.musicArtist": MediaType.ARTIST,
     "object.container.playlistContainer.sameArtist": MediaType.ARTIST,
     "object.container.playlistContainer": MediaType.PLAYLIST,
-    SONOS_ITEM_MUSIC_TRACK: MediaType.TRACK,
-    SONOS_ITEM_AUDIO_BOOK: MediaType.TRACK,
+    "object.item.audioItem.musicTrack": MediaType.TRACK,
+    "object.item.audioItem.audioBook": MediaType.TRACK,
 }
 
 MEDIA_TYPES_TO_SONOS: dict[MediaType | str, str] = {
@@ -128,9 +126,9 @@ SONOS_TYPES_MAPPING = {
     "object.container.playlistContainer.sameArtist": SONOS_ARTIST,
     "object.container.playlistContainer": SONOS_PLAYLISTS,
     "object.item": SONOS_OTHER_ITEM,
-    SONOS_ITEM_MUSIC_TRACK: SONOS_TRACKS,
+    "object.item.audioItem.musicTrack": SONOS_TRACKS,
     "object.item.audioItem.audioBroadcast": SONOS_RADIO,
-    SONOS_ITEM_AUDIO_BOOK: SONOS_AUDIO_BOOK,
+    "object.item.audioItem.audioBook": SONOS_AUDIO_BOOK,
 }
 
 LIBRARY_TITLES_MAPPING = {
@@ -154,7 +152,6 @@ PLAYABLE_MEDIA_TYPES = [
     MediaType.TRACK,
 ]
 
-# Other existing constants (unchanged)...
 SONOS_CHECK_ACTIVITY = "sonos_check_activity"
 SONOS_CREATE_ALARM = "sonos_create_alarm"
 SONOS_CREATE_AUDIO_FORMAT_SENSOR = "sonos_create_audio_format_sensor"
